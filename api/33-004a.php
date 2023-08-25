@@ -1,7 +1,7 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    if($_SERVER['HTTP_ORIGIN'] === 'http://example.jp') {
-      header('Access-Control-Allow-Origin: http://example.com/aip/33-004a.php');
+    if($_SERVER['HTTP_ORIGIN'] === 'http://localhost:8080') {
+      header('Access-Control-Allow-Origin: http://example.jp');
       header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
       header('Access-Control-Allow-Headers: Content-Type');
       header('Access-Control-Max-Age: 1728000');

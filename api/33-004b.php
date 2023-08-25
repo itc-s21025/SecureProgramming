@@ -1,6 +1,6 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] === "OPTIONS") {
-    if ($_SERVER['HTTP_ORIGIN'] == "http://example.jp") {
+    if ($_SERVER['HTTP_ORIGIN'] == "http://localhost:8080") {
       header('Access-Control-Allow-Origin: http://example.jp');
       header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
       header('Access-Control-Allow-Headers: Content-Type');
@@ -14,7 +14,7 @@
     }
   } elseif ($_SERVER['REQUEST_METHOD'] === "POST") {
     header('Content-Type: application/json');
-    header('Access-Control-Allow-Origin: http://example.jp');
+    header('Access-Control-Allow-Origin: http://localhost:8080');
     header('Access-Control-Max-Age: 10');
     echo json_encode(['zipcode' => '100-0100', 'address' => '東京都大島町']);
   } else {
